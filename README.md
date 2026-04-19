@@ -4,7 +4,7 @@ This repository contains my solution and experimentation workflow for the **SPR 
 
 The project explores **transformer-based NLP approaches** for clinical text classification, primarily using the pretrained models **`pucpr/biobertpt-clin`** and **BERTimbau**, with the goal of inferring radiological assessment from descriptive mammography findings alone.
 
-**Kaggle competition:** (https://www.kaggle.com/competitions/spr-2026-mammography-report-classification/data)
+**Kaggle competition:** (https://www.kaggle.com/competitions/spr-2026-mammography-report-classification)
 
 ---
 
