@@ -213,7 +213,7 @@ If you use or reference the competition, please cite:
 Eduardo Farina and Felipe Kitamura, MD, PhD.
 SPR 2026 Mammography Report Classification.
 Kaggle, 2026.
-[Insert competition link here]
+(https://www.kaggle.com/competitions/spr-2026-mammography-report-classification)
 
 ---
 
