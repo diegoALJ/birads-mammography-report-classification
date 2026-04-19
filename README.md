@@ -102,7 +102,7 @@ The overall workflow included:
 
 ## Repository Structure
 
-```text
+
 birads-mammography-report-classification/
 ├── README.md
 ├── requirements.txt
@@ -126,7 +126,7 @@ birads-mammography-report-classification/
 ├── images/
 │   └── README_assets/
 └── data/
-```text
+
 
 ---
 
