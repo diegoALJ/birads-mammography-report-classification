@@ -4,6 +4,7 @@ This repository contains my solution and experimentation workflow for the **SPR 
 
 The project explores **transformer-based NLP approaches** for clinical text classification, primarily using the pretrained models **`pucpr/biobertpt-clin`** and **BERTimbau**, with the goal of inferring radiological assessment from descriptive mammography findings alone.
 
+**Best competition score:** **0.83**  
 **Kaggle competition:** (https://www.kaggle.com/competitions/spr-2026-mammography-report-classification)
 
 ---
@@ -80,27 +81,56 @@ To reproduce the experiments, you must obtain access to the dataset directly thr
 
 ---
 
+---
+
 ## Modeling Approach
 
-This project focused on **clinical NLP classification using pretrained transformer models**, primarily:
+This project focused on **transformer-based clinical NLP classification**, primarily using:
 
 - **`pucpr/biobertpt-clin`**
 - **BERTimbau**
 
-The main objective was to evaluate how well Portuguese biomedical and general-language transformer backbones could infer BI-RADS categories from the descriptive sections of mammography reports.
+Among the tested backbones, **`pucpr/biobertpt-clin` performed slightly better overall**, although the gap versus BERTimbau was not large.
 
-The overall workflow included:
+### Training setup
 
-- exploratory data analysis (EDA),
-- text inspection and preprocessing,
-- transformer fine-tuning,
-- cross-validation,
-- macro F1-based model selection,
-- and Kaggle submission generation.
+- **5-fold cross-validation**
+- typically **8 to 12 epochs**
+- **early stopping patience of 3 epochs**
+- model selection based on **macro F1**
+
+The goal was to evaluate how well Portuguese biomedical and general-domain transformer models could infer BI-RADS classes from the descriptive sections of mammography reports alone.
 
 ---
 
+## Preprocessing
+
+Preprocessing was intentionally minimal.
+
+Based on exploratory data analysis, the reports were already well-structured and consistently organized, so no heavy text normalization pipeline was necessary. The main preprocessing step focused on **leakage cleaning**, ensuring that no direct target information from the impression/conclusion section remained in the modeling input.
+
+This design choice helped preserve the original clinical language while minimizing the risk of artificial performance inflation.
+
+---
+
+## Key Results
+
+- **Best competition score:** **0.83**
+- **Validation strategy:** 5-fold cross-validation
+- **Best-performing backbone:** `pucpr/biobertpt-clin`
+- **Alternative backbone explored:** BERTimbau
+- **Core metric:** macro F1
+
+This project showed that pretrained transformer models can perform strongly on radiology report classification with relatively limited preprocessing, provided that leakage is handled carefully and validation is done properly.
+
+---
 ## Repository Structure
+
+This repository is being organized progressively into a more modular format. Initially, the experimentation workflow is centered around **two notebooks**:
+
+- **`01_eda.ipynb`** – exploratory data analysis
+- **`02_modeling.ipynb`** – feature engineering, modeling, validation, ensembling, and inference
+
 
 ```
 birads-mammography-report-classification/
@@ -148,11 +178,6 @@ More detailed setup instructions can be added once the final project structure i
 
 ---
 
-## Results
-
-This repository documents my experimentation for the competition, including transformer-based baselines and fine-tuned clinical NLP models for BI-RADS prediction.
-
-Final scores, validation summaries, and selected submission artifacts can be added here once you finish polishing the repository.
 
 ---
 
