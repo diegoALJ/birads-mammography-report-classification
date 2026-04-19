@@ -203,5 +203,67 @@ cython_debug/
 
 # Marimo
 marimo/_static/
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# VS Code / editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python build / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Local data files (do not upload competition data)
+data/train.csv
+data/test.csv
+data/raw/
+data/processed/
+data/external/
+
+# Large outputs / local artifacts
+outputs/
+models/
+checkpoints/
+cache/
+tmp/
+
+# Kaggle / submissions / experiment outputs
+results/submissions/*.csv
+results/metrics/*.json
+results/metrics/*.txt
+
+# Hugging Face / Torch cache
+.huggingface/
+.cache/
+torch_cache/
+
+# Misc
+*.bak
+*.tmp
 marimo/_lsp/
 __marimo__/
