@@ -126,5 +126,65 @@ birads-mammography-report-classification/
 ├── images/
 │   └── README_assets/
 └── data/
+
+
+
+Reproducibility
+
+Because the dataset cannot be redistributed, this repository is designed to be reproducible once the user has access to the official competition data.
+
+General workflow:
+
+Join the Kaggle competition and accept its rules.
+Download the competition data from Kaggle.
+Place the files locally in the expected directory structure.
+Run the notebooks and/or modularized scripts.
+Generate predictions and submission files.
+
+More detailed setup instructions can be added once the final project structure is completed.
+
+Results
+
+This repository documents my experimentation for the competition, including transformer-based baselines and fine-tuned clinical NLP models for BI-RADS prediction.
+
+Final scores, validation summaries, and selected submission artifacts can be added here once you finish polishing the repository.
+
+Organizers
+
+This competition was organized by:
+
+Sociedade Paulista de Radiologia
+Douglas Racy
+Gustavo Corradi
+Eduardo Farina
+Vanderlei Silva
+Aline Sessino
+Giuliano Giovanetti
+Almir Bittencourt
+Felipe Kitamura
+Lilian Mallagoli
+Sheila Costa
+Donating Institutions
+AC Camargo
+Almir Bittencourt
+Soraia Damião
+Hapvida
+Alexandre Bialowas
+Eduardo Caminha
+Unifesp
+Eduardo Farina
+Nitamar Abdala
+Citation
+
+If you use or reference the competition, please cite:
+
+Eduardo Farina and Felipe Kitamura, MD, PhD.
+SPR 2026 Mammography Report Classification.
+Kaggle, 2026.
+[Insert competition link here]
+
+Disclaimer
+
+This repository is an independent portfolio project built around a public Kaggle competition. It is intended for educational, research, and reproducibility purposes only. All dataset rights, competition rules, and privacy restrictions remain with the official organizers and hosting platform.
     ├── sample/
     └── metadata/
